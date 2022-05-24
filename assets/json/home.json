@@ -1,0 +1,27 @@
+{
+  "title": "4 types of penguin: The only list you'll ever need",
+  "type": "article",
+  "headerImage": "/assets/img/cool-penguins.jpg",
+  "paragraphs": [
+    {
+      "title": "African penguin",
+      "text": "African black-footed penguins (Spheniscus demersus) are the only species of penguin native to Africa, living only in South Africa and Namibia. They use their noisy birdsong to identify each other, find a mate and ask for food.",
+      "image": "/assets/img/african-penguins.jpg"
+    },
+    {
+      "title": "Northern rockhopper penguin",
+      "text": "Northern rockhoppers (Eudyptes moseleyi) are native to Tristan da Cunha and Gough Island. Inhabiting naturally uninhabited islands, these little birds have little fear of humans and treat us with curiosity - all they want is your love and respect.",
+      "image": "/assets/img/northern-rockhopper-penguins.jpg"
+    },
+    {
+      "title": "King penguin",
+      "text": "King penguins (Aptenodytes patagonicus patagonicus) are native to the frozen and cold islands of the southern Atlantic Ocean, particularly the Falkland Islands. These penguins are stunningly beautiful, but their fuzzy brown chicks may just be the ugly ducklings of all penguins. These majestic birds are the second largest penguin species.",
+      "image": "/assets/img/king-penguins.jpg"
+    },
+    {
+      "title": "Adélie penguin",
+      "text": "For many people, Adélie penguins (Pygoscelis adeliae) are by far the cutest species, but did you know that these Antarctic predators are one of the region's most fierce hunters. Unfortunately, climate change is affecting their food source and thousands of their chicks starve every year.",
+      "image": "/assets/img/adelie-penguins.jpg"
+    }
+  ]
+}
