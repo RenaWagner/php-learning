@@ -8,13 +8,13 @@ $database = "exercise_data";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 $ID = mysqli_real_escape_string($conn, $_GET['ID']);
-$sql = "SELECT articles.title, images.path,articles.uuid FROM articles INNER JOIN images ON articles.headerImage_uuid=images.uuid WHERE articles.id=$ID" ;
+
+$sql = "SELECT articles.title, images.path,articles.uuid FROM articles LEFT JOIN images ON articles.headerImage_uuid=images.uuid WHERE articles.id=$ID" ;
 $result = mysqli_query($conn, $sql);
 $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
-print_r($articles);
 
 $articleUuid =$articles[0]['uuid']; 
-$sqlParagraph = "SELECT * FROM paragraphs INNER JOIN images ON paragraphs.image_uuid=images.uuid WHERE paragraphs.article_id='$articleUuid'" ;
+$sqlParagraph = "SELECT * FROM paragraphs LEFT JOIN images ON paragraphs.image_uuid=images.uuid WHERE paragraphs.article_id='$articleUuid'" ;
 $resultParagraph = mysqli_query($conn, $sqlParagraph);
 $paragraphs = mysqli_fetch_all($resultParagraph, MYSQLI_ASSOC);
 }
@@ -32,16 +32,20 @@ foreach($articles as $article => $value) {
   $title = $value['title'];
   $headerImageUrl =  $value['path'];
   echo "<h1>$title</h1>";
-echo "<img src='$headerImageUrl' alt='headerImage' class='headerImage'/>";
+  if ($headerImageUrl){
+    echo "<img src='$headerImageUrl' alt='headerImage' class='headerImage'/>";
+  }
 }
 
 foreach($paragraphs as $paragraph => $value){
   $title = $value['title'];
    $text = $value['text'];
-  $headerImageUrl =  $value['path'];
+  $paragraphImageUrl =  $value['path'];
   echo "<h2>$title</h2>";
   echo "<p>$text</p>";
-  echo "<img src='$headerImageUrl' alt='headerImage' class='headerImage'/>";
+   if ($paragraphImageUrl){
+    echo "<img src='$paragraphImageUrl' alt='paragraphImageUrl' class='headerImage'/>";
+  }
 }
 ?>  
 
