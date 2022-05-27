@@ -8,6 +8,10 @@
 <body>
 <?php 
 
+foreach($articlesTitles as $articleTitle => $value) {
+  $title = $value['title'];
+ echo "<h2>$title</h2>";
+}
 // require 'vendor/autoload.php';
 
 // use GuzzleHttp\Client;
