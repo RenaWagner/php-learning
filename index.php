@@ -14,6 +14,7 @@ foreach($articles as $article => $value) {
  // echo "<h2>$title</h2>";
  echo "<a href='details.php?ID={$articleId}'><h2>{$title}</h2></a>";
 }
+echo "<a href='form.php'><button>Write own article</button></a>";
 // require 'vendor/autoload.php';
 
 // use GuzzleHttp\Client;

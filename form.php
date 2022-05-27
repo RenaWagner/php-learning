@@ -44,7 +44,7 @@ $sql="INSERT INTO articles (uuid, title, type) VALUES ('$articleUuid', '$title',
 <h1>Submit your article </h1>
 <form method="post" > 
 Title: <input type="text" name="title"><br>
-Text: <textarea name="text"></textarea><br>
+Text: <textarea name="text" cols="70" rows="50"></textarea><br>
 <input type="submit">
 </form>
 
