@@ -12,17 +12,17 @@ echo "Connection error: " . mysqli_conect_erro();
 }
 
 //write query for all articles
-$sql = 'SELECT title FROM articles';
+$sql = 'SELECT * FROM articles';
 
 // make query and get result
 $result = mysqli_query($conn, $sql);
 
 // fetch the resulting rows as an array
-$articlesTitles = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 // free the result from memory
 mysqli_free_result($result);
 
 //close connection
-mysqli_close($conn);
+// mysqli_close($conn);
 ?>

@@ -8,9 +8,11 @@
 <body>
 <?php 
 
-foreach($articlesTitles as $articleTitle => $value) {
+foreach($articles as $article => $value) {
   $title = $value['title'];
- echo "<h2>$title</h2>";
+  $articleId = $value['id'];
+ // echo "<h2>$title</h2>";
+ echo "<a href='details.php?ID={$articleId}'><h2>{$title}</h2></a>";
 }
 // require 'vendor/autoload.php';
 
